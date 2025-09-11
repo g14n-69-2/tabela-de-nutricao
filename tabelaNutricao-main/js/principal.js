@@ -5,9 +5,10 @@ var pipipupu = document.querySelector(".titulo");
 pipipupu.textContent = "Dr. Pipipupu Nutrição";
 
 //acessar a tag TR -> meleca Paulo
-var paciente = document.querySelector(".meleca");
+var pacientes = document.querySelectorAll(".meleca");
 
-for(var i = 0; i < paciente.length; i++){
+for(var i = 0; i < pacientes.length; i++){
+    paciente = pacientes[i];
 
 
     //seleciona o PESO do meleca
