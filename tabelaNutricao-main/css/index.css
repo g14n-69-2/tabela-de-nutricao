@@ -8,10 +8,12 @@ body{
 }
 
 header{
-	background-color: #333;
-	height: 3em;
+	background-color: #234901;
+	height: 4em;
 	color: #FFF;
 	margin-bottom: 1em;
+	font-size: 1.5em;
+	text-align: center;
 }
 
 header h1{

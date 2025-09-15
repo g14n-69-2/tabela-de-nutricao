@@ -4,7 +4,7 @@ subtitulo.textContent = "Meus Melecas";
 var pipipupu = document.querySelector(".titulo");
 pipipupu.textContent = "Dr. Pipipupu Nutrição";
 
-//acessar a tag TR -> meleca Paulo
+//acessar a tag TR -> dos melecas
 var pacientes = document.querySelectorAll(".meleca");
 
 for(var i = 0; i < pacientes.length; i++){
