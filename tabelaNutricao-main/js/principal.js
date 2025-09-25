@@ -1,10 +1,10 @@
 //muda o nome a partir do seletor de classe
 var subtitulo = document.querySelector(".subtitulo");
 subtitulo.textContent = "Meus Melecas";
-var pipipupu = document.querySelector(".titulo");
-pipipupu.textContent = "Dr. Pipipupu Nutrição";
+var quimicu = document.querySelector(".titulo");
+quimicu.textContent = "Dr. Quimicu Nutrição";
 
-//acessar a tag TR -> dos melecas
+//acessar a tag  <TR>  dos melecas
 var pacientes = document.querySelectorAll(".meleca");
 
 for(var i = 0; i < pacientes.length; i++){
@@ -29,12 +29,13 @@ for(var i = 0; i < pacientes.length; i++){
     //condicionais
     if(pesoValido && alturaValida){
      var tdIMC = paciente.querySelector(".info-imc");
-     tdIMC.textContent = imc;
+     tdIMC.textContent = imc.toFixed(2);
     }
     if(peso <= 0 || peso >= 1000){
      pesoValido = false;
      console.log("Peso inválido");
      tdIMC.textContent = "Peso Inválido";
+     paciente.style.backgroundColor = "brown";
     }
     if(altura <= 0 || altura >= 3.00){
      alturaValida = false;
