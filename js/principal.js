@@ -50,3 +50,32 @@ quimicu.addEventListener('click', mostraMensagem);
 function mostraMensagem(){
     alert("Blablablaa blebleblee blublubluuuu, haaB blblblblblblblblblbl luh luh luh... Lingang guliguliguulii whaataa linganguuu linganguuuuu");
 }
+
+//Acessa o Botão
+var botaoAdicionar = document.querySelector("#adicionar-paciente")
+//Executa os Códigos ao Clicar no Botão
+botaoAdicionar.addEventListener('click', function(event){
+    event.preventDefault();
+     //Acessa o Formulario
+     var formulario = document.querySelector("#form-adiciona");
+
+     //Captura os Valores Digitados
+     var nome = formulario.nome.value;
+     var peso = formulario.peso.value;
+     var altura = formulario.altura.value;
+     var gordura = formulario.altura.value;
+     //Cria a Nova Tag <tr>
+     var pacienteTr = document.createElement("tr");
+
+     var nomeTd = document.createElement("td");
+     var pesoTd = document.createElement("td");
+     var alturaTd = document.createElement("td");
+     var gorduraTd = document.createElement ("td");
+     var imcTd = document.createElement ("td");
+
+     nomeTd.textContent = nome;
+     pesoTd.textContent = peso;
+     alturaTd.textContent = altura;
+     gorduraTd.textContent = gordura;
+     imcTd.textContent = imc;    
+});
