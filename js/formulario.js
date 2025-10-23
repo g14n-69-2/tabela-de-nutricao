@@ -13,6 +13,7 @@ botaoAdicionar.addEventListener('click', function(event){
      var tabela = document.querySelector("#tabela-pacientes");
      tabela.appendChild(pacienteTr);
 
+     formulario.reset();
 });
 
 
@@ -35,26 +36,24 @@ function criarTR(paciente){
 
     //Cria a Nova Tag <tr>
     var pacienteTr = document.createElement("tr");
-  
-    var nomeTd = document.createElement("td");
-    var pesoTd = document.createElement("td");
-    var alturaTd = document.createElement("td");
-    var gorduraTd = document.createElement ("td");
-    var imcTd = document.createElement ("td");
- 
-    //Adiciona os valores
-    nomeTd.textContent = paciente.nome;
-    pesoTd.textContent = paciente.peso;
-    alturaTd.textContent = paciente.altura;
-    gorduraTd.textContent = paciente.gordura;
-    imcTd.textContent = paciente.imc;
+    pacienteTr.classList.add("paciente");
 
     //Adiciona as tags na tela do meleca
-    pacienteTr.appendChild(nomeTd);
-    pacienteTr.appendChild(pesoTd);
-    pacienteTr.appendChild(alturaTd);
-    pacienteTr.appendChild(gorduraTd);
-    pacienteTr.appendChild(imcTd);
+    pacienteTr.appendChild(criarTd(paciente.nome, "info-nome"));
+    pacienteTr.appendChild(criarTd(paciente.peso, "info-peso"));
+    pacienteTr.appendChild(criarTd(paciente.altura, "info-altura"));
+    pacienteTr.appendChild(criarTd(paciente.gordura, "info-gordura"));
+    pacienteTr.appendChild(criarTd(paciente.imc, "info-imc"));
+
 
     return pacienteTr;
+}
+
+function criarTd(dado, classe){
+    const td = document.createElement("td");
+
+    td.textContent = dado;
+    td.classList.add(classe);
+
+    return td;
 }
